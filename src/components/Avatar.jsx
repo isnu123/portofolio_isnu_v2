@@ -2,8 +2,8 @@ import { useState } from 'react'
 import { profile } from '../data'
 import useProfilePhoto from '../hooks/useProfilePhoto'
 
-// Tombol "Ubah foto" hanya muncul saat development atau jika URL memakai ?edit
-const canEdit = import.meta.env.DEV || new URLSearchParams(window.location.search).has('edit')
+
+const canEdit = import.meta.env.DEV
 
 export default function Avatar() {
   const { photo, upload } = useProfilePhoto()
